@@ -1,3 +1,42 @@
-body {
-  background: blanchedalmond;
+body{
+  background-color: blanchedalmond;
+}
+.container{
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.a{
+  border: solid black;
+  height: 20vh;
+  width: 100vw;
+}
+.b{
+  border: solid black;
+  height: 70vh;
+  width: 70vw;
+
+}
+.c{
+  border: solid black;
+  height: 70vh;
+  width: 20vw;
+
+}
+
+@media all and (max-width: 600px) {
+  .container{
+    flex-direction: column;  
+    flex-wrap: nowrap;
+    }
+    .b{
+      width: 100vw;
+      height: 60vh;
+    }
+    .c{
+      height: 20vh;
+      width: 100vw;
+    }
+  }
 }

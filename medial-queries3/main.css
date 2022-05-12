@@ -1,3 +1,52 @@
 body {
   background: peachpuff;
 }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.a, .b, .c, .d, .e, .f, .g, .h {
+  border:solid black;
+  margin: 1em;
+}
+.a{
+  height: 30vh;
+  width: 100vw;
+  order: 1;
+}
+.b, .c, .d, .e, .f, .g{
+  height: 20vh;
+  width: 15vw;
+  order: 1;
+}
+.e, .f, .g{
+  order: 3;
+  align-self: flex-start;
+  position: relative;
+  top: -300px;
+}
+.h{
+  height: 60vh;
+  width: 27vw;
+  order: 2;
+  flex-grow: 1;
+}
+@media all and (max-width:700px) {
+  .container{
+    justify-content: center;
+  }
+  .a{
+    height: 20vh;
+  }
+  .b, .c, .d, .e, .f, .g{
+    height: 18vh;
+    width: 18vh;
+    order: 1;
+    position: relative;
+    top: 0px;
+  }
+  .h{
+    height: 25vh;
+    width: 100vw;
+  }
+}
